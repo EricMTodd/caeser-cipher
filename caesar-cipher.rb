@@ -12,21 +12,21 @@ def encrypt(string, shift, legend)
         if string_char == legend_char
           # puts("#{k}: #{legend_char}")
           if k + shift > legend.length
-            puts("#{legend.length - k}: #{legend[legend.length - k]}")
+            # puts("#{legend.length - k}: #{legend[legend.length - k]}")
             encryption.push(legend[legend.length - k])
           else
-            puts("#{k + shift}: #{legend[k + shift]}")
+            # puts("#{k + shift}: #{legend[k + shift]}")
             encryption.push(legend[k + shift])
           end
         end
       end
     else
-      puts("nil: #{string_char}")
+      # puts("nil: #{string_char}")
       encryption.push(string_char)
     end
   end
-  p(encryption.join(""))
+  puts("encryption: #{encryption.join("")}")
   return encryption.join("")
 end
 
-encrypt("Hello world war Z0!", 5, legend)
+encrypt("Hello world!", 5, legend)
